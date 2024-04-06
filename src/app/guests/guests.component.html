@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="container glassy mt-3 ">
+  <div class="container text-center">
+  </div>
+    <h1 class=" header text-center text-dark">Guest List</h1>
+    <div class="container text-center">
+      <!-- Button trigger -->
+      <button type="button"
+       class="text-center form-control mt-3 mx-auto w-50 p-2 font-weight-bold btn btn-dark btn-lg fw-bold"
+       routerLink="/addguest">
+        Register a visit
+      </button>
+    </div>
+<div class="row justify-content-center">
+  <table class="table table-bordered custom-rounded-table table-striped mt-4 table table-white">
+    <thead class="thead-dark">
+      <tr>
+        <th>Name</th>
+        <th>Image</th>
+        <th>ID</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of guests">
+        <td class="custom-table-cell">{{ item.name }}</td>
+        <td class="custom-table-cell">
+          <img [src]="'http://127.0.0.1:3000/getimage/' + item.Image" alt="" class="square-rounded-img">
+        </td>
+        <td class="custom-table-cell">{{ item.ID }}</td>
+        <td class="custom-table-cell ">
+          <div class="action-buttons">
+              <!-- Ban/Unban button -->
+              <button (click)="updateBannedStatus(item._id)" class="action-buttons btn wide-btn" [ngClass]="{'btn-warning': !item.banned, 'btn-light': item.banned}">
+                {{ item.banned ? 'Unban' : 'Ban' }}
+              </button>
+              <!-- Delete button -->
+              <button (click)="delete(item._id)" class="action-buttons btn btn-danger wide-btn">Delete</button>
+            </div>
+        </td>
+      </tr>      
+    </tbody>
+  </table>
+
+
+

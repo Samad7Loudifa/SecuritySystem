@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container glassy d-flex flex-column justify-content-center mt-3 vh-200">
+  <h2 class="mt-5 text-center mb-4 text-dark header">Edit Resident Information</h2>
+  <form (ngSubmit)="updateandvalidate(id,Eresidentform)" #Eresidentform = "ngForm" class="mb-5">
+    <div class="mb-3">
+      <label for="residentName" class="form-label text-dark">Resident's Name</label>
+      <input [(ngModel)]="resident.name" name="residentName" type="text" class="form-control" id="residentName" placeholder="Enter resident's name" #residentName = ngModel required>
+      <div><small *ngIf="residentName.invalid && residentName.touched">Resident name is a required field</small></div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label text-dark">Flat Number</label>
+      <input [(ngModel)]="resident.flat" name="flatNumber" type="text" class="form-control" id="flatNumber" placeholder="Enter flat number" #flatNumber = ngModel required>
+      <div><small *ngIf="flatNumber.invalid && flatNumber.touched">Flat number is a required field</small></div>
+    </div>
+    <div class="text-center">
+      <button  type="submit" class="mx-2 mb-3 btn btn-primary" [disabled]="!Eresidentform.valid">Update</button>
+      <a routerLink="/home" class="mx-2 btn mb-3 btn-secondary">Cancel</a>
+    </div>
+  </form>
+</div>

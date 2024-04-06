@@ -1,0 +1,26 @@
+.square-rounded-img {
+    width: 100px; /* or any specific size */
+    height: 100px; /* should match the width to ensure the square shape */
+    border-radius: 10px; /* adjust this value to control the roundness of edges */
+    object-fit: cover; /* ensures the image covers the area nicely without stretching */
+  }
+  .custom-table-cell {
+    vertical-align: middle; /* Center the content vertically */
+    text-align: center; /* Center the content horizontally if needed */
+  }
+  .custom-rounded-table td {
+    vertical-align: middle;
+    text-align: center;
+  }
+  .action-buttons {
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Adjusts spacing evenly */
+    width: 95%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+
+  

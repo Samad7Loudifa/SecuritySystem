@@ -1,0 +1,17 @@
+input.ng-invalid.ng-touched{
+    border:red 1px solid;
+
+}
+small{
+    color: red;
+}
+select.ng-invalid.ng-touched{
+    border:red 1px solid;
+
+}
+.isBanned{
+    border:red 1px solid;
+    color: red;
+    font-weight: bold;
+
+}

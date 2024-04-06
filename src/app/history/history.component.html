@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container glassy mt-3">
+  <div class="row justify-content-center">
+    <h1 class="header text-center mt-5 text-dark">history</h1>
+    <table class="table table-bordered custom-rounded-table table-striped mt-4 table table-white">
+      <thead class="thead-dark">
+        <tr>
+          <th>Resident name</th>
+          <th>Guest name</th>
+          <th>Guest image</th>
+          <th>Visit time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of guests">
+          <td>{{ item.resident?.name || 'Unknown' }}</td> <!-- Use optional chaining and fallback to 'Unknown' if 'resident' is undefined -->
+          <td>{{ item.name }}</td>
+          <td><img [src]="'http://127.0.0.1:3000/getimage/' + item.Image" alt="" class="square-rounded-img"></td>
+          <td>{{ item.datetime | date:'dd/MM/yyyy HH:mm'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

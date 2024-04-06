@@ -1,0 +1,130 @@
+
+body {
+    background-image:url(./assets/img.jpg);
+    background-size: cover;
+    margin: 0;
+  }
+  @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+  height: 60px;
+  
+}
+
+.navbackground {
+  background: rgb(255, 255, 255);
+
+}
+/* Add margin-top to push the content down below the navigation bar */
+.container.d-flex.flex-column.justify-content-center.vh-400 {
+  margin-top: 270px;
+}
+
+header::after,
+.container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.logo {
+  float: left;
+  padding: 10px 0;
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+
+  position: relative;
+}
+
+nav a {
+  color: #020202;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  background-color: #444;
+
+  position: absolute;
+  top: 0;
+  width: 0%;
+
+  transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+.custom-rounded-table {
+    border-collapse: separate;
+    border-spacing: 10px; /* Adjust the spacing between cells if needed */
+    border-radius: 15px; /* Adjust the border-radius value as needed */
+    overflow: hidden;
+  }
+
+  .custom-rounded-table th,
+  .custom-rounded-table td {
+    text-align: center;
+    border: 1px solid #dee2e6; /* Add border to th and td for separation */
+    padding: 8px; /* Add padding to th and td for better visual */
+  }
+  .action-buttons {
+    display: flex;
+    justify-content: space-around;
+  
+  }
+  .wide-btn {
+    flex: 0.4;
+  }
+.header{
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.glassy {
+  width: 80%;
+  height: 80%;
+  max-width: 80%;
+  max-height: 80%;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  backdrop-filter: blur(10px); /* Apply a blur effect */
+  color: white; /* Text color */
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+/* validation */
+input.ng-invalid.ng-touched{
+  border:red 1px solid;
+
+}
+small{
+  color: red;
+}
+select.ng-invalid.ng-touched{
+  border:red 1px solid;
+
+}
